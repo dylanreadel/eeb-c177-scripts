@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# take the CSV file Pacifici2013_data.csv
+# take a CSV file
 
 # remove the header
 
@@ -10,6 +10,6 @@
 
 # sort in reverse, numerically, by the body mass
 
-# redirect to a body mass csv file
+# redirect to a csv file
 
-tail -n +2 ~/Developer/repos/CSB/unix/data/Pacifici2013_data.csv | cut -d ";" -f 2-6 | tr ";" " " | sort -r -n -k 6 > BodyM.csv
+tail -n +2 $1 | cut -d ";" -f 2-6 | tr ";" " " | sort -r -n -k 6 > $2
